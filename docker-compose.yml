@@ -33,10 +33,10 @@ services:
     build: ./frontend  # assuming your React Dockerfile is here
     container_name: react-container
     environment:
-      - PORT=8082
+      - PORT=8100
       - VITE_API_URL=${VITE_API_URL}  # backend URL
     ports:
-      - "8082:8082"
+      - "8100:8100"
     networks:
       - springboot-network
     command: ["npm", "run", "dev", "--", "--host"]  # dev mode with hot reload
