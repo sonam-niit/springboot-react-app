@@ -15,7 +15,7 @@ services:
       - springboot-network
 
   springboot-app:
-    build: .
+    build: ./backend
     container_name: springboot-container
     depends_on:
       - mysql
