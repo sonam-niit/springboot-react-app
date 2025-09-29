@@ -33,7 +33,8 @@ services:
     build: ./frontend  # assuming your React Dockerfile is here
     container_name: react-container
     environment:
-      - VITE_API_URL=http://host.docker.internal:8081/  # backend URL
+      - PORT=8082
+      - VITE_API_URL=${VITE_API_URL}  # backend URL
     ports:
       - "8082:8082"
     networks:
@@ -45,3 +46,7 @@ volumes:
 
 networks:
   springboot-network:
+
+# export VITE_API_URL=http://springboot-app:8081/api
+# docker-compose up -d --build
+
