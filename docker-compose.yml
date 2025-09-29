@@ -29,6 +29,17 @@ services:
     networks:
       - springboot-network
 
+  frontend:
+    build: ./frontend  # assuming your React Dockerfile is here
+    container_name: react-container
+    environment:
+      - VITE_API_URL=http://host.docker.internal:8081/  # backend URL
+    ports:
+      - "3000:3000"
+    networks:
+      - springboot-network
+    command: ["npm", "run", "dev", "--", "--host"]  # dev mode with hot reload
+
 volumes:
   mysql-data:
 
