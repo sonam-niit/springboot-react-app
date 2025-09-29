@@ -35,7 +35,7 @@ services:
     environment:
       - VITE_API_URL=http://host.docker.internal:8081/  # backend URL
     ports:
-      - "3000:3000"
+      - "8082:8082"
     networks:
       - springboot-network
     command: ["npm", "run", "dev", "--", "--host"]  # dev mode with hot reload
