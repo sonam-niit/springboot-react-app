@@ -7,5 +7,6 @@ export default defineConfig({
   server: {
     host: true,      // required for Docker
     port: 8100,      // change Vite port
+    allowedHosts: true
   },
 })
