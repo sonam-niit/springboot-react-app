@@ -49,4 +49,5 @@ networks:
 
 # export VITE_API_URL=http://springboot-app:8081/api
 # docker-compose up -d --build
+# docker-compose down
 
